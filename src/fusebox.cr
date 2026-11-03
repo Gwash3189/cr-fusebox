@@ -1,0 +1,6 @@
+require "./fusebox/version"
+require "./fusebox/errors"
+require "./fusebox/config"
+require "./fusebox/circuit"
+require "./fusebox/registry"
+require "./fusebox/dsl"

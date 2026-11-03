@@ -1,0 +1,6 @@
+require "./spec_helper"
+require "./fusebox/circuit_spec"
+require "./fusebox/config_spec"
+require "./fusebox/dsl_spec"
+require "./fusebox/errors_spec"
+require "./fusebox/registry_spec"

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+if ! command -v kcov >/dev/null 2>&1; then
+  echo "kcov is required: https://github.com/SimonKagstrom/kcov" >&2
+  exit 1
+fi
+
+mkdir -p bin coverage
+
+crystal build spec/all_specs.cr -o bin/all_specs
+kcov --clean --include-path=./src ./coverage ./bin/all_specs --order=random

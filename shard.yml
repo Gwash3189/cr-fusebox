@@ -1,0 +1,13 @@
+name: cr-fusebox
+version: 0.1.0
+crystal: ">= 1.21.0"
+license: MIT
+
+authors:
+  - Gwash3189
+
+description: |
+  A declarative circuit breaker shard for Crystal. Wrap instance methods with
+  failure thresholds, sliding windows, cooldowns, fallbacks, and lifecycle hooks.
+
+repository: https://github.com/Gwash3189/cr-fusebox

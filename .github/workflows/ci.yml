@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  spec:
+    runs-on: ubuntu-latest
+    container:
+      image: crystallang/crystal:1.21.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: shards install
+
+      - name: Check formatting
+        run: crystal tool format --check src spec
+
+      - name: Run specs
+        run: crystal spec --error-on-warnings
